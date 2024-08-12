@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="./images/logo.jpg" alt="Quizzzy Logo">
+        <div class="logo"> Quizzy❓..</div>
+    </header>
+    <main>
+        <div class="dialog-box">
+            <section id="welcome" class="active">
+                <h1>Welcome to Quizzy!</h1>
+                <br>
+                <input type="text" id="username" placeholder="Enter your name">
+                <button onclick="startQuiz()">Start Quiz</button>
+            </section>
+            <section id="topic-selection" class="hidden">
+                <h2>Select a Topic</h2>
+                <button class="topic-card" onclick="selectTopic('Block_Chain')"><img src="./images/blockchain.jpeg"
+                        alt="blockchain logo"><br>Block Chain</button><br>
+                <button class="topic-card" onclick="selectTopic('Cyber_Security')"><img src="./images/cybersecurity.jpg"
+                        alt="blockchain logo"><br>Cyber security</button><br>
+                <button class="topic-card" onclick="selectTopic('Full_Stack')"><img src="./images/fullstack.jpg"
+                        alt="blockchain logo"><br>Full stack</button><br>
+                <button class="topic-card" onclick="selectTopic('IT')"><img src="./images/it.jpeg"
+                        alt="blockchain logo"><br>IT</button>
+            </section>
+            <section id="level-selection" class="hidden">
+                <h2>Select Level</h2><br>
+                <button onclick="startQuizLevel('easy')">Easy</button><br>
+                <button onclick="startQuizLevel('medium')">Moderate</button><br>
+                <button onclick="startQuizLevel('hard')">Difficult</button><br>
+            </section>
+
+            <section id="rules" class="hidden">
+                <h2>Instructions</h2>
+                <hr><br>
+                <ul style="margin-left: 0; padding-left: 0;">
+                    <li>1️⃣Each question has a time limit:
+                    <li>Easy: 30 seconds</li>
+                    <li>Moderate: 30 seconds</li>
+                    <li>Difficult: 20 seconds</li>
+                    </li>
+                    <li>2️⃣Negative marks:
+                    <li>Easy: No negative</li>
+                    <li>Moderate: 1/4 marks</li>
+                    <li>Difficult: 1/4 marks</li>
+                    </li>
+                    <li>3️⃣Select the correct answer from the given options.</li>
+                    <li>4️⃣Your score will be displayed at the end of the quiz.</li>
+                    <li>5️⃣You can view your answers at the end of the quiz.</li>
+                    <li>6️⃣<b>Each question carries 2 marks.</b></li>
+                </ul>
+                <input type="checkbox" id="accept-terms">Read and accept the above terms and conditions.<br>
+                <button onclick="showQuiz()">Start Quiz</button>
+            </section>
+
+            <section id="quiz" class="hidden ">
+                <div id="quiz-container">
+                    <h2 id="quiz-title"></h2>
+                    <div id="timer-bar"></div>
+                    <div id="question-container"></div>
+                    <button id="submit-button" onclick="submitAnswer()">Submit</button>
+                </div>
+            </section>
+
+            <section id="result" class="hidden ">
+                <h2>Congratulations 🎉🎊, <span id="user-name"></span>!</h2>
+                <b>
+                    <p id="score"></p>
+                </b>
+                <button id="view-answers-btn" onclick="displayAnswers()">View Answers</button>
+            </section>
+
+            <section id="answers" class="hidden ">
+                <h3>Check Answers:</h3>
+                <div id="answers-container"> </div>
+                <button id="back-btn">⬅</button>
+                <button id="next-btn">➡</button>
+                <button id="restart-btn">Restart Quiz</button>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Quizzy-AN Interactive Quiz Application</p>
+        <div class="contact">
+            <h3>Contact Us</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/veera-manikanta-nandikolla-0b0ba0255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target='_blank'>
+                    <img src="https://img.icons8.com/ios-filled/30/FFFFFF/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/Nandikolla65209?t=_lAS86KUbpiLtjBKJghdkw&s=09" target='_blank'>
+                    <img src="https://img.icons8.com/ios-filled/30/FFFFFF/twitter.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/mani_kanta353?igsh=Zmhpbnk3M2d3Ymk2" target='_blank'>
+                    <img src="https://img.icons8.com/ios-filled/30/FFFFFF/instagram-new.png" alt="Instagram">
+                </a>
+                <a href="https://github.com/mani-353" target='_blank'>
+                    <img src="https://img.icons8.com/ios-filled/30/FFFFFF/github.png" alt="GitHub">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=9063374811" target='_blank'>
+                    <img src="https://img.icons8.com/ios-filled/30/FFFFFF/whatsapp.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
