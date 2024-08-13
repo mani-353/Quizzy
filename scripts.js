@@ -230,7 +230,7 @@ function loadAnswer() {
     const answerContainer = document.getElementById('answers-container');
     answerContainer.innerHTML = `
     <ul>
-        <li>${currentQuestionIndex + 1}.${question.question}</li></ul>
+        <li><h3>${currentQuestionIndex + 1}.${question.question}</h3></li></ul>
     <ol type="A">
         ${question.answers.map((answer, index) => {
         let className = '';
